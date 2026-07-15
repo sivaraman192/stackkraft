@@ -23,7 +23,7 @@ const Services = () => {
    title: "Business Website",
    desc: "Complete corporate sites engineered with customized layouts, service directories, maps, and SEO optimizations.",
    icon: <Layout className="w-6 h-6 text-red-500" />,
-   pricing: "from ₹30,000 / $500",
+   pricing: "FROM ₹12,000 / $149",
    benefits: [
     "Highly responsive layouts tested on all device viewports",
     "Configured custom domains, DNS routing, and hosting pipelines",
@@ -37,7 +37,7 @@ const Services = () => {
    title: "Landing Page",
    desc: "High-conversion single page frameworks designed for product campaigns, startups, and marketing funnels.",
    icon: <Sparkles className="w-6 h-6 text-red-500" />,
-   pricing: "from ₹15,000 / $250",
+   pricing: "FROM ₹6,000 / $79",
    benefits: [
     "Focused visual flows optimized for maximum conversions",
     "Lightweight codebase achieving sub-second edge loads",
@@ -51,7 +51,7 @@ const Services = () => {
    title: "Portfolio Website",
    desc: "Creative, interactive personal portfolios with smooth custom scroll indicators, dark themes, and contact channels.",
    icon: <Award className="w-6 h-6 text-red-500" />,
-   pricing: "from ₹15,000 / $250",
+   pricing: "FROM ₹8,000 / $99",
    benefits: [
     "Unique creative design matching your developer/creative voice",
     "Interactive case study galleries with custom filter switches",
@@ -65,7 +65,7 @@ const Services = () => {
    title: "React Development",
    desc: "Single Page Apps (SPAs) built with React 19, custom hooks, context management, and fast component loads.",
    icon: <Code className="w-6 h-6 text-red-500" />,
-   pricing: "from ₹25,000 / $400",
+   pricing: "FROM ₹16,000 / $199",
    benefits: [
     "Highly modular, reusable React component structures",
     "Advanced context and state hook configurations",
@@ -79,7 +79,7 @@ const Services = () => {
    title: "Website Maintenance",
    desc: "Continuous performance audits, SEO improvements, software security patches, and hosting configuration support.",
    icon: <Wrench className="w-6 h-6 text-red-500" />,
-   pricing: "from ₹5,000 / month",
+   pricing: "FROM ₹5,000 / MONTH ($59/month)",
    benefits: [
     "Monthly package audits and software security upgrades",
     "Lightweight content adjustments and image compressions",
@@ -93,7 +93,7 @@ const Services = () => {
    title: "Full Stack Web App",
    desc: "Bespoke SaaS platforms, custom dashboards, database schemas, JWT authentication, and Express REST APIs.",
    icon: <Database className="w-6 h-6 text-red-500" />,
-   pricing: "Custom Quoting",
+   pricing: "FROM ₹32,000 / $399",
    benefits: [
     "Highly secure authentication utilizing JWT and bcrypt encryption",
     "Mongoose schemas with indexes for rapid database queries",

@@ -165,14 +165,28 @@ const About = () => {
     {/* Founder Card */}
     <div className="space-y-8 text-left">
      <h2 className="text-2xl sm:text-3xl font-bold font-display text-white text-center">Meet the Founder</h2>
-     <div className="max-w-4xl mx-auto rounded-3xl border border-red-500/10 bg-gradient-to-r from-slate-100 to-slate-200  border-slate-200 p-8 sm:p-10 shadow-2xl relative overflow-hidden flex flex-col md:flex-row gap-10 items-center">
+     <div 
+      className="max-w-4xl mx-auto rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden flex flex-col md:flex-row gap-10 items-center"
+      style={{ 
+       background: 'linear-gradient(135deg, #111111, #1a1a1a)', 
+       backdropFilter: 'blur(18px)', 
+       border: '1px solid rgba(255,255,255,0.08)', 
+       boxShadow: '0 15px 45px rgba(255,0,0,0.12)' 
+      }}
+     >
       {/* Pulsing neon corner */}
       <div className="absolute top-0 right-0 w-24 h-24 bg-red-600/10 rounded-full blur-2xl pointer-events-none" />
 
       {/* Profile Avatar Graphic */}
       <div className="shrink-0 relative">
-       <div className="w-28 h-28 sm:w-32 sm:h-32 bg-gradient-to-tr from-red-650 to-indigo-650 rounded-2xl flex items-center justify-center text-white text-3xl font-extrabold font-display border border-red-500/25 relative z-10 select-none">
-        SM
+       <div 
+        className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl flex items-center justify-center text-white text-3xl font-extrabold font-display relative z-10 select-none"
+        style={{ 
+         backgroundColor: '#1a1a1a', 
+         border: '1px solid rgba(255,59,59,0.5)' 
+        }}
+       >
+        SK
        </div>
        <div className="absolute -inset-1 bg-red-500/20 rounded-2xl blur-md -z-10 animate-pulse" />
       </div>
@@ -181,22 +195,30 @@ const About = () => {
       <div className="flex-1 space-y-5 text-left">
        <div className="space-y-1">
         <h3 className="text-xl sm:text-2xl font-bold text-white font-display">Sivaraman M</h3>
-        <p className="text-xs font-semibold text-red-400 uppercase tracking-widest flex items-center gap-1.5">
+        <p className="text-xs font-semibold text-[#ff3b3b] uppercase tracking-widest flex items-center gap-1.5">
          <Terminal className="w-3.5 h-3.5" />
          Founder & Full Stack Developer
         </p>
        </div>
 
-       <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-sans font-light">
+       <p className="text-xs sm:text-sm text-[#d1d5db] leading-relaxed font-sans font-light">
         Graduated with a Bachelor of Engineering in Computer Science (B.E. CSE), Sivaraman founded StackKraft to deliver premium full-stack services. Operating from Tamil Nadu, India, he is skilled in architecting modular components, optimizing MERN stack databases, and setting up highly responsive frontend systems.
        </p>
 
        {/* Skills badges */}
        <div className="space-y-2">
-        <span className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Primary Stack:</span>
+        <span className="text-[10px] uppercase tracking-widest text-[#9ca3af] font-bold">Primary Stack:</span>
         <div className="flex flex-wrap gap-2">
          {founderSkills.map((skill, sIdx) => (
-          <span key={sIdx} className="text-[10px] font-bold bg-neutral-900 border border-neutral-800 text-slate-350 px-3.5 py-1.5 rounded-lg font-sans">
+          <span 
+           key={sIdx} 
+           className="text-[10px] font-bold px-3.5 py-1.5 rounded-lg font-sans"
+           style={{ 
+            backgroundColor: '#1f1f1f', 
+            color: '#ffffff', 
+            border: '1px solid rgba(255,255,255,0.08)' 
+           }}
+          >
            {skill}
           </span>
          ))}
@@ -204,12 +226,12 @@ const About = () => {
        </div>
 
        {/* Action socials */}
-       <div className="flex items-center gap-6 pt-2 border-t border-slate-900 text-xs">
-        <a href="https://github.com/sivaraman192" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-slate-400 hover:text-white hover:underline">
+       <div className="flex items-center gap-6 pt-2 border-t border-white/5 text-xs">
+        <a href="https://github.com/sivaraman192" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-white hover:text-[#ff3b3b] hover:underline transition-colors">
          <FaGithub className="w-4 h-4" />
          GitHub
         </a>
-        <a href="mailto:sivaraman.official13@gmail.com" className="flex items-center gap-1 text-slate-400 hover:text-white hover:underline">
+        <a href="mailto:sivaraman.official13@gmail.com" className="flex items-center gap-1 text-white hover:text-[#ff3b3b] hover:underline transition-colors">
          <BookOpen className="w-4 h-4" />
          Email Founder
         </a>
