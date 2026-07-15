@@ -1,0 +1,19 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(96, 50) scale(2)">
+    <defs>
+      <mask id="cut-mask-local-vert">
+        <rect width="160" height="100" fill="white" />
+        <line x1="40" y1="85" x2="120" y2="15" stroke="black" stroke-width="12" />
+      </mask>
+    </defs>
+    <g mask="url(#cut-mask-local-vert)">
+      <!-- S -->
+      <path d="M 68 33 C 68 27, 63 24, 56 24 C 48 24, 44 28, 44 34 C 44 42, 52 44, 59 47 C 67 49, 72 53, 72 61 C 72 70, 65 76, 54 76 C 43 76, 38 70, 38 62 L 46 62 C 46 67, 50 70, 54 70 C 60 70, 64 67, 64 61 C 64 54, 58 52, 50 49 C 42 46, 36 43, 36 34 C 36 25, 43 18, 56 18 C 67 18, 70 26, 70 33 Z" fill="#000000" />
+      <!-- K -->
+      <path d="M 88 18 H 95 V 45 L 112 18 H 121 L 101 48 L 122 76 H 113 L 95 52 V 76 H 88 Z" fill="#000000" />
+    </g>
+    <line x1="43" y1="82" x2="117" y2="18" stroke="#000000" stroke-width="6" stroke-linecap="round" />
+  </g>
+  <text x="256" y="380" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="46" fill="#000000" text-anchor="middle" letter-spacing="1">StackKraft</text>
+  <text x="256" y="430" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="20" fill="#000000" text-anchor="middle" letter-spacing="1.5">Modern Web Solutions</text>
+</svg>

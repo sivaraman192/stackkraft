@@ -1,0 +1,15 @@
+const mongoose = require('mongoose');
+
+const connectDB = async () => {
+  try {
+    const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/stackkraft';
+    const conn = await mongoose.connect(dbURI);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.error(`MongoDB Connection Error: ${error.message}`);
+    // Do not crash server in production immediately, retry could be handled or just exit
+    process.exit(1);
+  }
+};
+
+module.exports = connectDB;

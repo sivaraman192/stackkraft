@@ -1,0 +1,30 @@
+services:
+  # StackKraft Technologies Node Express API Backend Service
+  - type: web
+    name: stackkraft-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGODB_URI
+        sync: false # Set in Render dashboard (e.g., MongoDB Atlas URI)
+      - key: JWT_SECRET
+        generateValue: true # Generates a secure random key automatically
+      - key: ADMIN_USERNAME
+        value: sivaraman
+      - key: ADMIN_PASSWORD
+        sync: false # Set in Render dashboard (Secure default)
+      - key: ADMIN_EMAIL
+        value: sivaraman.official13@gmail.com
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
