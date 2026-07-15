@@ -8,7 +8,7 @@ const getApiUrl = () => {
   const envUrl = import.meta.env.VITE_API_URL;
   if (!envUrl) {
     return 'http://localhost:5000/api'
-    return 'https://stackkraft.onrender.com';
+    return 'https://stackkraft.onrender.com/api';
   }
   const cleanUrl = envUrl.endsWith('/') ? envUrl.slice(0, -1) : envUrl;
   return cleanUrl.endsWith('/api') ? cleanUrl : `${cleanUrl}/api`;
