@@ -3,8 +3,17 @@ import axios from 'axios';
 
 const AuthContext = createContext();
 
-// Set base URL for API requests
-export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+// Set base URL for API requests. Automatically appends /api subpath if missing from configured environment variable.
+const getApiUrl = () => {
+  const envUrl = import.meta.env.VITE_API_URL;
+  if (!envUrl) {
+    return 'http://localhost:5000/api';
+  }
+  const cleanUrl = envUrl.endsWith('/') ? envUrl.slice(0, -1) : envUrl;
+  return cleanUrl.endsWith('/api') ? cleanUrl : `${cleanUrl}/api`;
+};
+
+export const API_URL = getApiUrl();
 
 export const AuthProvider = ({ children }) => {
   const [admin, setAdmin] = useState(null);
