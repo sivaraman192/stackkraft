@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss()
+    tailwindcss(),
   ],
 
   base: '/',
@@ -13,6 +13,8 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+    chunkSizeWarningLimit: 1000,
+
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -24,23 +26,26 @@ export default defineConfig({
             ) {
               return 'vendor'
             }
+
             if (
               id.includes('framer-motion') ||
               id.includes('lucide-react')
             ) {
               return 'vendor-ui'
             }
+
             if (id.includes('recharts')) {
               return 'charts'
             }
+
             if (id.includes('swiper')) {
               return 'sliders'
             }
+
             return 'vendor-other'
           }
-        }
-      }
+        },
+      },
     },
-    chunkSizeWarningLimit: 1000
-  }
+  },
 })
