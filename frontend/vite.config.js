@@ -1,17 +1,20 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss()
+    tailwindcss(),
   ],
+
   base: '/',
+
   build: {
     outDir: 'dist',
     emptyOutDir: true,
     chunkSizeWarningLimit: 1000,
+
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -21,24 +24,28 @@ export default defineConfig({
               id.includes('react-dom') ||
               id.includes('react-router-dom')
             ) {
-              return 'vendor';
+              return 'vendor'
             }
+
             if (
               id.includes('framer-motion') ||
               id.includes('lucide-react')
             ) {
-              return 'vendor-ui';
+              return 'vendor-ui'
             }
+
             if (id.includes('recharts')) {
-              return 'charts';
+              return 'charts'
             }
+
             if (id.includes('swiper')) {
-              return 'sliders';
+              return 'sliders'
             }
-            return 'vendor-other';
+
+            return 'vendor-other'
           }
-        }
-      }
-    }
-  }
-});
+        },
+      },
+    },
+  },
+})
